@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soluna Roadmap</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+      margin: 0;
+      padding: 0;
+      color: #1B2E59;
+    }
+    header {
+      background-color: #1B2E59;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      animation: fadeIn 1.2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .phase {
+      margin-bottom: 40px;
+      padding: 15px;
+      border-left: 4px solid #E7C16F;
+      background: #fffbea;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+    .phase:hover {
+      transform: scale(1.01);
+      background: #fff4c8;
+    }
+    .phase h2 {
+      color: #E7C16F;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+    .done::before {
+      content: "✅ ";
+    }
+    .todo::before {
+      content: "🔲 ";
+    }
+    .inprogress::before {
+      content: "🛠️ ";
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Soluna – Roadmap Interattiva</h1>
+    <p>Tracciamento delle fasi e delle versioni del progetto</p>
+  </header>
+  <div class="container">
+    <div class="phase">
+      <h2>🌱 FASE 1 - Fondamenta (Aprile - Maggio)</h2>
+      <ul>
+        <li class="done">Nome scelto: Soluna</li>
+        <li class="done">Brand Kit creato</li>
+        <li class="todo">Logo finale da creare</li>
+        <li class="todo">Dominio da registrare</li>
+        <li class="done">Roadmap PDF generata</li>
+        <li class="done">Presentazione del progetto completata</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>💫 FASE 2 - Cuore del Bot (Maggio - Giugno)</h2>
+      <ul>
+        <li class="todo">Memoria locale</li>
+        <li class="todo">Voce offline (TTS)</li>
+        <li class="todo">Interfaccia vocale CLI</li>
+        <li class="todo">Salvataggio emozioni (JSON)</li>
+        <li class="todo">Interfaccia web semplice (Gradio/Streamlit)</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>🚀 FASE 3 - Lancio e Verticali (Estate 2025)</h2>
+      <ul>
+        <li class="todo">Soluna Voice</li>
+        <li class="todo">Soluna Pro</li>
+        <li class="todo">Soluna Care</li>
+        <li class="todo">Landing page ufficiale</li>
+        <li class="todo">Licenze e contenuti premium</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>🌕 FASE 4 - Evoluzione (Autunno 2025+)</h2>
+      <ul>
+        <li class="todo">Dashboard terapeuti</li>
+        <li class="todo">Modalità School & Geriatrica</li>
+        <li class="todo">Nuovi contenuti (Chakra, trauma, ansia)</li>
+        <li class="todo">Community attiva</li>
+        <li class="todo">Collaborazioni professionali</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>📦 Versionamento – Rilasci Soluna</h2>
+      <ul>
+        <li class="done">🧪 ALPHA v0.1 – Aprile 2025: GPT CLI + Diario JSON</li>
+        <li class="todo">🧠 BETA v0.6 – Giugno 2025: Interfaccia web + Voice + Test esterni</li>
+        <li class="todo">🚀 RC v0.9 – Agosto 2025: Landing page, licenza Pro, pacchetti</li>
+        <li class="todo">🌕 STABLE v1.0 – Settembre 2025: Lancio ufficiale, contenuti Pro</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
