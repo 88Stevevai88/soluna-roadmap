@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soluna – Roadmap</title>
+  <link rel="icon" type="image/png" href="soluna_logo.png"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+      margin: 0;
+      padding: 0;
+      color: #1B2E59;
+    }
+    header {
+      background-color: #1B2E59;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 10px 40px;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #E7C16F;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .container {
+      padding: 20px 30px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: #fff;
+      border: 4px solid #E7C16F;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 50%;
+    }
+    .content {
+      padding: 20px;
+      background-color: #fef7e0;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .phase-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #E7C16F;
+    }
+    .status {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-top: 5px;
+    }
+    .checkbox {
+      display: inline-block;
+      cursor: pointer;
+    }
+    .checkbox input {
+      display: none;
+    }
+    .checkbox span {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-color: #fff;
+      border: 2px solid #1B2E59;
+      border-radius: 4px;
+      position: relative;
+      margin-right: 8px;
+    }
+    .checkbox input:checked + span::after {
+      content: '✔';
+      position: absolute;
+      left: 3px;
+      top: -2px;
+      font-size: 16px;
+      color: #1B2E59;
+    }
+    footer {
+      background-color: #1B2E59;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .container::after {
+        left: 60px;
+      }
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="soluna_logo.png" alt="Soluna Logo"/>
+  <h1>Soluna – Roadmap del Progetto</h1>
+  <p>Fasi evolutive e versionamento</p>
+</header>
+
+<div class="timeline">
+
+  <div class="container left">
+    <div class="content">
+      <div class="phase-title">🌱 FASE 1 - Fondamenta (Aprile - Maggio 2025)</div>
+      <label class="checkbox"><input type="checkbox" checked><span></span>Nome scelto: Soluna</label><br>
+      <label class="checkbox"><input type="checkbox" checked><span></span>Brand Kit creato</label><br>
+      <label class="checkbox"><input type="checkbox"><span></span>Logo finale</label><br>
+      <label class="checkbox"><input type="checkbox"><span></span>Dominio da registrare</label><br>
+      <label class="checkbox"><input type="checkbox" checked><span></span>Roadmap PDF</label>
+      <div class="status">Stato: In completamento</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Soluna – by Piero Pasquariello | pieropasquariello@icloud.com
+</footer>
+
+</body>
+</html>
