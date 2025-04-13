@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soluna – Inizio</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #1c1f26, #121212);
+      color: #ffe9a1;
+      font-family: 'Georgia', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 2s ease;
+    }
+
+    #startBtn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: #ffd700;
+      color: #1c1f26;
+      border: none;
+      border-radius: 30px;
+      font-style: italic;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      margin-top: 20px;
+    }
+
+    .frase {
+      opacity: 0;
+      font-style: italic;
+      font-size: 1.3em;
+      max-width: 80%;
+      margin: 10px 0;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #frasiContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .pulsante-luce {
+      animation: glowPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+      }
+    }
+
+</style>
+</head>
+<body>
+  <div id="intro">
+    <h1 style="font-size: 1.8em;">Benvenuto.</h1>
+    <p style="font-style: italic;">Tocca per accendere Soluna.</p>
+    <button id="startBtn" class="pulsante-luce" onclick="inizia()">Scopri Soluna</button>
+  </div>
+
+  <div id="frasiContainer"></div>
+
+  <audio id="audio" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/10/26/audio_2e661b4181.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function inizia() {
+      document.getElementById('intro').style.animation = 'fadeOut 1s ease forwards';
+      const audio = document.getElementById('audio');
+      const frasi = document.getElementById('frasiContainer');
+
+      audio.play().then(() => {
+        setTimeout(() => {
+          document.getElementById('intro').style.display = 'none';
+
+          const frasiTesto = [
+            "Ogni viaggio comincia da un respiro consapevole...",
+            "Ogni luce nasce da un piccolo silenzio interiore...",
+            "Soluna è più di un progetto: è una presenza che accompagna...",
+            "Prepara il cuore. Il cammino inizia adesso."
+          ];
+
+          frasiTesto.forEach((testo, i) => {
+            const div = document.createElement('div');
+            div.className = 'frase';
+            div.style.animationDelay = `${i * 4}s`;
+            div.textContent = testo;
+            frasi.appendChild(div);
+          });
+
+        }, 1000);
+
+        setTimeout(() => {
+          window.location.href = 'roadmap.html';
+        }, 18000); // dopo tutte le frasi, si va alla roadmap
+
+      }).catch(() => {
+        alert('Tocca il pulsante per avviare il suono.');
+      });
+    }
+  </script>
+</body>
+</html>
