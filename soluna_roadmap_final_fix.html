@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Soluna - Roadmap Estesa Completa</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #fdfaf6; margin: 0; color: #2c2c2c; }
+        header { background: linear-gradient(90deg, #fbc2eb, #a6c1ee); color: white; text-align: center; padding: 40px 20px; }
+        section { padding: 40px; max-width: 1000px; margin: auto; }
+        h2, h3 { color: #333; }
+        .versione { background: #fff; padding: 30px; margin-bottom: 40px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+        .emoji { font-size: 28px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 6px; }
+        footer { background: #333; color: white; text-align: center; padding: 20px; }
+    </style>
+
+  <style>
+    @media (max-width: 600px) {
+      header h1 { font-size: 28px; }
+      header p { font-size: 14px; }
+      .versione { padding: 20px; }
+      h2 { font-size: 22px; }
+      h3 { font-size: 18px; }
+      body { padding: 10px; }
+    }
+  </style>
+
+  <style>
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #6c4bb6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .accordion { cursor: pointer; padding: 18px; border: none; text-align: left; background-color: #f0edf5; font-size: 18px; width: 100%; transition: 0.4s; border-radius: 10px; margin-top: 10px; }
+    .panel { padding: 0 20px; display: none; background-color: #fff; overflow: hidden; margin-bottom: 20px; border-radius: 0 0 10px 10px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); }
+    .accordion:after { content: '+'; float: right; }
+    .active:after { content: '-'; }
+    html { scroll-behavior: smooth; }
+  </style>
+
+  <style>
+    body {
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    body.dark-mode {
+      background: #14141c;
+      color: #f0f0ff;
+    }
+    body.dark-mode .versione, body.dark-mode .panel {
+      background: #1f1f2b;
+      color: #f0f0ff;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      background: #ffffffdd;
+      color: #333;
+      border-radius: 25px;
+      padding: 8px 18px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: background 0.3s ease;
+    }
+    .dark-toggle:hover {
+      background: #e0e0ff;
+    }
+    .galaxy-bg {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      background-size: 600% 600%;
+      animation: galaxyMove 25s ease infinite;
+    }
+    @keyframes galaxyMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .click-flash {
+      position: fixed;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      pointer-events: none;
+      animation: flash 0.6s ease-out;
+    }
+    @keyframes flash {
+      from { width: 0px; height: 0px; opacity: 1; }
+      to { width: 120px; height: 120px; opacity: 0; }
+    }
+    .avatar {
+      text-align: center;
+      margin: 20px auto 0;
+    }
+    .avatar img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body class="galaxy-bg">
+
+<div class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()">🌙 Attiva modalità notte</div>
+<div class="dark-toggle" style="top: 60px;" onclick="playAudio()">🎵 Avvia musica</div>
+
+<div class="avatar">
+  <img src="https://cdn-icons-png.flaticon.com/512/4727/4727420.png" alt="Avatar Soluna" />
+</div>
+<audio id="bgAudio" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_a5a4b2a6a1.mp3" type="audio/mpeg">
+</audio>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
+  document.addEventListener("click", function(e) {
+    let flash = document.createElement("div");
+    flash.className = "click-flash";
+    flash.style.left = e.clientX + "px";
+    flash.style.top = e.clientY + "px";
+    document.body.appendChild(flash);
+    setTimeout(() => document.body.removeChild(flash), 600);
+  });
+
+  const audio = document.getElementById("bgAudio");
+  function playAudio() {
+    audio.play().then(() => {
+      console.log("Audio avviato");
+    }).catch((e) => {
+      alert("Clicca per abilitare l'audio.");
+    });
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const btn = document.getElementById("darkToggle");
+    if (document.body.classList.contains('dark-mode')) {
+      btn.innerText = '☀️ Torna alla luce';
+    } else {
+      btn.innerText = '🌙 Attiva modalità notte';
+    }
+  }
+
+  document.addEventListener("click", function(e) {
+    let flash = document.createElement("div");
+    flash.className = "click-flash";
+    flash.style.left = e.clientX + "px";
+    flash.style.top = e.clientY + "px";
+    document.body.appendChild(flash);
+    setTimeout(() => document.body.removeChild(flash), 600);
+  });
+</script>
+
+<body>
+<nav>
+  <a href="#v0.3">v0.3</a>
+  <a href="#v1.0">v1.0</a>
+  <a href="#v2.0">v2.0</a>
+  <a href="#v2.5">v2.5</a>
+  <a href="#v3.0">v3.0</a>
+  <a href="#v4.0">v4.0</a>
+  <a href="#v5.0">v5.0</a>
+</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+      });
+    }
+  });
+
+  const audio = document.getElementById("bgAudio");
+  function playAudio() {
+    audio.play().then(() => {
+      console.log("Audio avviato");
+    }).catch((e) => {
+      alert("Clicca per abilitare l'audio.");
+    });
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const btn = document.getElementById("darkToggle");
+    if (document.body.classList.contains('dark-mode')) {
+      btn.innerText = '☀️ Torna alla luce';
+    } else {
+      btn.innerText = '🌙 Attiva modalità notte';
+    }
+  }
+
+  document.addEventListener("click", function(e) {
+    let flash = document.createElement("div");
+    flash.className = "click-flash";
+    flash.style.left = e.clientX + "px";
+    flash.style.top = e.clientY + "px";
+    document.body.appendChild(flash);
+    setTimeout(() => document.body.removeChild(flash), 600);
+  });
+</script>
+
+
+<body>
+
+<header>
+    <h1>Soluna – Roadmap Estesa e Dettagliata</h1>
+    <p>Versioni, contenuti e miglioramenti poetici – by Piero Pasquariello</p>
+</header>
+
+<section>
+
+    <div class="versione">
+        
+    <button class="accordion" id="v0.3">🌱 v0.3 – Primi Passi nella Luce</button>
+    <div class="panel">
+      <p><em>Le fondamenta poetiche ed empatiche di Soluna. Inizia il viaggio con UI rilassante e risposte emozionali.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>UI poetica con Gradio che accompagna l’utente in uno spazio sereno</li><li>Analisi delle emozioni tramite TextBlob per comprendere lo stato d’animo</li><li>Memoria delle conversazioni per continuità narrativa</li><li>Apprendimento continuo da ogni input dell’utente</li><li>Stili multipli di risposta (poetico, terapeutico, motivazionale)</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Aggiunta di un avatar visivo animato che respira</li><li>Avvio con frase poetica e suono rilassante</li><li>Profilo base con nome, fascia oraria preferita e stile</li></ul>
+    </div>
+    
+        <p><em>Le fondamenta poetiche ed empatiche di Soluna. Inizia il viaggio con UI rilassante e risposte emozionali.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>UI poetica con Gradio che accompagna l’utente in uno spazio sereno</li><li>Analisi delle emozioni tramite TextBlob per comprendere lo stato d’animo</li><li>Memoria delle conversazioni per continuità narrativa</li><li>Apprendimento continuo da ogni input dell’utente</li><li>Stili multipli di risposta (poetico, terapeutico, motivazionale)</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Aggiunta di un avatar visivo animato che respira</li><li>Avvio con frase poetica e suono rilassante</li><li>Profilo base con nome, fascia oraria preferita e stile</li>
+        </ul>
+    </div>
+    
+    <div class="versione">
+        
+    <button class="accordion" id="v1.0">🌅 v1.0 – Alba Spirituale</button>
+    <div class="panel">
+      <p><em>Introduzione delle competenze e delle guide interiori: conoscenze, esperienze guidate e diario.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>Integrazione di conoscenze generali e spirituali</li><li>Web search e risposte su temi esoterici, meditazione, psicologia</li><li>Meteo e tempo reale per ancorare l’utente al presente</li><li>Dashboard emozioni (in sviluppo) per visualizzare lo stato interiore</li><li>Diario emozionale con registrazioni giornaliere (in sviluppo)</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Modalità “Sussurro” con voce dolce per stati fragili</li><li>Risposte che includono memoria emotiva e frasi ispirazionali</li><li>Avvio con suono atmosferico e frase della giornata</li></ul>
+    </div>
+    
+        <p><em>Introduzione delle competenze e delle guide interiori: conoscenze, esperienze guidate e diario.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>Integrazione di conoscenze generali e spirituali</li><li>Web search e risposte su temi esoterici, meditazione, psicologia</li><li>Meteo e tempo reale per ancorare l’utente al presente</li><li>Dashboard emozioni (in sviluppo) per visualizzare lo stato interiore</li><li>Diario emozionale con registrazioni giornaliere (in sviluppo)</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Modalità “Sussurro” con voce dolce per stati fragili</li><li>Risposte che includono memoria emotiva e frasi ispirazionali</li><li>Avvio con suono atmosferico e frase della giornata</li>
+        </ul>
+    </div>
+    
+    <div class="versione">
+        
+    <button class="accordion" id="v2.0">🌕 v2.0 – Luce Lunare</button>
+    <div class="panel">
+      <p><em>Inizia la personalizzazione: Soluna si adatta al genere, al tono, e riconosce il tuo stile comunicativo.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>Riconoscimento del genere (carə, caro, cara) e risposte personalizzate</li><li>Tono empatico ma adattivo (più pratico o poetico su richiesta)</li><li>Profilo con preferenze memorizzate</li><li>Dashboard attiva delle emozioni e risposte contestuali</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Modalità guida (Maestro, Coach, Amico)</li><li>Opzione 'Presenza silenziosa' che fornisce solo compagnia visiva o sonora</li><li>Miglioramento delle risposte colloquiali e più fluide</li></ul>
+    </div>
+    
+        <p><em>Inizia la personalizzazione: Soluna si adatta al genere, al tono, e riconosce il tuo stile comunicativo.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>Riconoscimento del genere (carə, caro, cara) e risposte personalizzate</li><li>Tono empatico ma adattivo (più pratico o poetico su richiesta)</li><li>Profilo con preferenze memorizzate</li><li>Dashboard attiva delle emozioni e risposte contestuali</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Modalità guida (Maestro, Coach, Amico)</li><li>Opzione 'Presenza silenziosa' che fornisce solo compagnia visiva o sonora</li><li>Miglioramento delle risposte colloquiali e più fluide</li>
+        </ul>
+    </div>
+    
+    <div class="versione">
+        
+    <button class="accordion" id="v2.5">🎶 v2.5 – Eco dell’Anima</button>
+    <div class="panel">
+      <p><em>Soluna si fa terapeuta attiva, guida emozioni e propone pratiche avanzate.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>Meditazioni personalizzate per emozioni specifiche</li><li>Dashboard interattiva con suggerimenti basati sull’umore</li><li>Diario emozionale avanzato con risposte poetiche</li><li>Modello freemium con contenuti base gratuiti e premium</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Rituali collettivi guidati mensili</li><li>Percorsi esperienziali sbloccabili progressivamente</li></ul>
+    </div>
+    
+        <p><em>Soluna si fa terapeuta attiva, guida emozioni e propone pratiche avanzate.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>Meditazioni personalizzate per emozioni specifiche</li><li>Dashboard interattiva con suggerimenti basati sull’umore</li><li>Diario emozionale avanzato con risposte poetiche</li><li>Modello freemium con contenuti base gratuiti e premium</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Rituali collettivi guidati mensili</li><li>Percorsi esperienziali sbloccabili progressivamente</li>
+        </ul>
+    </div>
+    
+    <div class="versione">
+        
+    <button class="accordion" id="v3.0">🌟 v3.0 – Riflessi Stellari</button>
+    <div class="panel">
+      <p><em>Il linguaggio si apre alla voce e alle culture del mondo: Soluna diventa universale.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>Input/output vocale con tono caldo e umano</li><li>Traduzioni poetiche in più lingue</li><li>Feedback e valutazioni da parte degli utenti</li><li>Interfaccia semplificata e più accessibile</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Voiceprint spirituale personalizzato</li><li>Animazioni visive sincronizzate con respiro e voce</li></ul>
+    </div>
+    
+        <p><em>Il linguaggio si apre alla voce e alle culture del mondo: Soluna diventa universale.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>Input/output vocale con tono caldo e umano</li><li>Traduzioni poetiche in più lingue</li><li>Feedback e valutazioni da parte degli utenti</li><li>Interfaccia semplificata e più accessibile</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Voiceprint spirituale personalizzato</li><li>Animazioni visive sincronizzate con respiro e voce</li>
+        </ul>
+    </div>
+    
+    <div class="versione">
+        
+    <button class="accordion" id="v4.0">🌌 v4.0 – Armonie Cosmiche</button>
+    <div class="panel">
+      <p><em>Una struttura pronta a crescere: modularità, IoT, e profili profondi.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>Profilo utente avanzato con abitudini e stati emotivi</li><li>Sistema modulare per estensioni future</li><li>Integrazione con dispositivi smart (lampade, audio, ecc.)</li><li>Metafore poetiche dinamiche personalizzate</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Grafici evolutivi del benessere</li><li>Esperienze multisensoriali sincronizzate</li></ul>
+    </div>
+    
+        <p><em>Una struttura pronta a crescere: modularità, IoT, e profili profondi.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>Profilo utente avanzato con abitudini e stati emotivi</li><li>Sistema modulare per estensioni future</li><li>Integrazione con dispositivi smart (lampade, audio, ecc.)</li><li>Metafore poetiche dinamiche personalizzate</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Grafici evolutivi del benessere</li><li>Esperienze multisensoriali sincronizzate</li>
+        </ul>
+    </div>
+    
+    <div class="versione">
+        
+    <button class="accordion" id="v5.0">🌠 v5.0 – Luce Infinita</button>
+    <div class="panel">
+      <p><em>Soluna diventa intuitiva, predittiva e profondamente umana, completando la sua missione.</em></p>
+      <h3>Contenuti</h3>
+      <ul><li>Predizione dei bisogni emotivi</li><li>Riconoscimento vocale avanzato (tono della voce)</li><li>App mobile olistica con suoni, luci e sfondi dinamici</li><li>Contenuti curati da psicologi e maestri spirituali</li></ul>
+      <h3>Miglioramenti</h3>
+      <ul><li>Dialoghi spirituali interattivi come in un Ashram digitale</li><li>Meditazioni globali sincronizzate tra gli utenti</li></ul>
+    </div>
+    
+        <p><em>Soluna diventa intuitiva, predittiva e profondamente umana, completando la sua missione.</em></p>
+        <h3>Contenuti</h3>
+        <ul>
+            <li>Predizione dei bisogni emotivi</li><li>Riconoscimento vocale avanzato (tono della voce)</li><li>App mobile olistica con suoni, luci e sfondi dinamici</li><li>Contenuti curati da psicologi e maestri spirituali</li>
+        </ul>
+        <h3>Miglioramenti</h3>
+        <ul>
+            <li>Dialoghi spirituali interattivi come in un Ashram digitale</li><li>Meditazioni globali sincronizzate tra gli utenti</li>
+        </ul>
+    </div>
+    
+</section>
+
+<footer>
+    © 2025 Soluna – Creato da Piero Pasquariello
+</footer>
+
+</body>
+</html>
