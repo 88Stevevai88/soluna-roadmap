@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soluna – Roadmap Spirituale</title>
+<style>
+    body {
+  opacity: 0;
+  animation: fadeBodyIn 2s ease forwards;
+
+      background: linear-gradient(to bottom, #1b1e24, #2a2f33);
+      font-family: 'Georgia', serif;
+      color: #f5efe0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header img {
+      width: 90px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 2.2em;
+      color: #ffd700;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px rgba(255,215,0,0.4);
+    }
+    header p {
+      font-size: 1.1em;
+      color: #f5efe0;
+      margin-bottom: 20px;
+    }
+    .intro {
+      text-align: center;
+      font-style: italic;
+      margin: 0 auto 30px;
+      font-size: 1.1em;
+      max-width: 600px;
+      color: #ffe9a1;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .version {
+      background-color: rgba(42, 47, 51, 0.95);
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    }
+    .version h2 {
+      color: #ffd700;
+      margin-bottom: 5px;
+    }
+    .version small {
+      display: block;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+    .version .poetica {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #dcdcdc;
+    }
+    .version ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+    .version p {
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .back-home {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .back-home a {
+      background: #ffd700;
+      color: #1b1e24;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+    }
+    .music-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .music-controls button {
+      background: #ffd700;
+      color: #1b1e24;
+      border: none;
+      padding: 10px 16px;
+      margin: 5px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    .music-controls button:hover {
+      background: #ffe066;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px 20px;
+      font-size: 0.95em;
+      color: #bbb;
+      border-top: 1px solid #444;
+      margin-top: 40px;
+      font-style: italic;
+    }
+  
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  .intro {
+    font-size: 1em;
+    padding: 0 15px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .version {
+    padding: 15px;
+  }
+  .music-controls button {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+    font-size: 1em;
+  }
+  footer {
+    font-size: 0.85em;
+    padding: 20px 10px;
+  }
+  .back-home a {
+    width: 90%;
+    display: inline-block;
+  }
+}
+
+
+body {
+  opacity: 0;
+  animation: fadeBodyIn 2s ease forwards;
+}
+@keyframes fadeBodyIn {
+  to { opacity: 1; }
+}
+
+
+.version {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+<style>
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.version {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+<style>
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.version {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+<style>
+.fade-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-title.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section.fade-in p {
+  opacity: 0;
+  animation: revealContent 1.2s ease 0.6s forwards;
+}
+@keyframes revealContent {
+  to { opacity: 1; }
+}
+
+.version {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+<style>
+.citazione {
+  font-style: italic;
+  color: #d8c89f;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 1.1em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.citazione.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.version {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style></head>
+<body>
+<audio autoplay="" id="audio" loop="">
+<source src="https://cdn.pixabay.com/audio/2022/10/26/audio_2e661b4181.mp3" type="audio/mpeg"/>
+    Il tuo browser non supporta l'audio HTML5.
+  </audio>
+<header>
+<img alt="Logo Soluna" src="soluna_logo.png"/>
+<h1>Soluna – Roadmap Spirituale</h1>
+<p>Il viaggio delle versioni, dal seme alla luce</p>
+</header>
+<div class="music-controls">
+<label for="musicSelect">🎵 <strong>Cambia vibrazione musicale</strong></label><br/>
+<select id="musicSelect" onchange="changeMusic(this.value)" style="margin-top: 8px; padding: 10px 20px; border-radius: 20px; background-color: #1b1e24; color: #ffd700; border: 1px solid #ffd700; font-weight: bold;">
+<option value="0">🌅 Respiro dell’Alba</option>
+<option value="1">🌊 Onde del Cuore</option>
+<option value="2">🌌 Silenzio Stellare</option>
+</select>
+<br/><br/>
+<div id="currentTrack" style="margin-top: 10px; font-style: italic; color: #ffe9a1;"></div>
+</div>
+
+
+
+<script>
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  function revealSections() {
+    document.querySelectorAll('.section').forEach(el => {
+      if (isInViewport(el)) {
+        el.classList.add('fade-in');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealSections);
+  window.addEventListener('resize', revealSections);
+  window.addEventListener('load', revealSections);
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(revealSections, 100);
+  });
+</script>
+
+</body>
+
+</html>
