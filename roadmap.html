@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soluna – Roadmap Spirituale</title>
+<style>
+    body {
+  
+  animation: fadeBodyIn 2s ease forwards;
+
+      background: linear-gradient(to bottom, #1b1e24, #2a2f33);
+      font-family: 'Georgia', serif;
+      color: #f5efe0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from {   }
+      to { opacity: 1;  }
+    }
+    header img {
+      width: 90px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 2.2em;
+      color: #d4af7f;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px rgba(212,175,127,0.25);
+    }
+    header p {
+      font-size: 1.1em;
+      color: #f5efe0;
+      margin-bottom: 20px;
+    }
+    .intro {
+      text-align: center;
+      font-style: italic;
+      margin: 0 auto 30px;
+      font-size: 1.1em;
+      max-width: 600px;
+      color: #ffe9a1;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+.version {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4), inset -2px -2px 4px rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  margin-bottom: 40px; /* Distanza tra i blocchi */
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+    .version h2 {
+      color: #d4af7f;
+      margin-bottom: 5px;
+    }
+    .version small {
+      display: block;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+    .version .poetica {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #dcdcdc;
+    }
+    .version ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+    .version p {
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .back-home {
+      text-align: center;
+      
+
+margin: 50px 0;
+background: linear-gradient(135deg, rgba(240, 240, 255, 0.04), rgba(220, 220, 240, 0.02));
+border: 1px solid rgba(200, 200, 220, 0.12);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(8px);
+border-radius: 24px;
+
+
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(212, 175, 127, 0.5);
+    }
+    .music-controls button:hover {
+      background: #ffe066;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px 20px;
+      font-size: 0.95em;
+      color: #bbb;
+      border-top: 1px solid #444;
+      margin-top: 40px;
+      font-style: italic;
+    }
+  
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  .intro {
+    font-size: 1em;
+    padding: 0 15px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .version {
+    padding: 15px;
+  }
+  .music-controls button {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+    font-size: 1em;
+  }
+  footer {
+    font-size: 0.85em;
+    padding: 20px 10px;
+  }
+  .back-home a {
+    width: 90%;
+    display: inline-block;
+  }
+}
+
+
+body {
+  
+  animation: fadeBodyIn 2s ease forwards;
+}
+@keyframes fadeBodyIn {
+  to { opacity: 1; }
+}
+
+
+.version {
+  
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  
+}
+
+
+
+.version {
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.02));
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2), inset 0 0 6px rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  color: #f6f2e9;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.version:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 8px rgba(255, 255, 255, 0.04);
+}
+
+.version h2,
+.version ul,
+.version p,
+.version small {
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 10px 15px;
+  }
+  .version {
+    margin: 20px 0;
+    padding: 15px;
+  }
+}
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.version.fade-in {
+  animation: slideInUp 1s ease forwards;
+}
+.back-home a {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: radial-gradient(circle, #d4af7f 0%, #c4a200 100%);
+  color: #1b1e24;
+  font-weight: bold;
+  text-shadow: 0 0 4px #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.back-home a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+
+.timeline {
+  position: relative;
+  margin-left: 25px;
+  padding-left: 25px;
+  border-left: 3px solid var(--timeline-color);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.timeline-item::before {
+  content: var(--timeline-icon);
+  position: absolute;
+  left: -38px;
+  top: 16px;
+  background: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 18px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .timeline {
+    border-left: 2px solid var(--timeline-color);
+    margin-left: 15px;
+    padding-left: 20px;
+  }
+  .timeline-item::before {
+    left: -28px;
+    width: 26px;
+    height: 26px;
+    line-height: 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .timeline-item::before {
+    left: -6px;
+    top: -10px;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+  }
+}
+
+
+:root {
+  --bg-color: #1b1e24;
+  --card-bg: radial-gradient(circle at top left, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.02));
+  --card-color: #f6f2e9;
+  --timeline-color: rgba(212, 175, 127, 0.25);
+  --accent-color: #d4af7f;
+  --timeline-icon: "✨";
+}
+
+/* Stili base */
+body {
+  background: var(--bg-color);
+}
+.version {
+  background: var(--card-bg);
+  color: var(--card-color);
+}
+.timeline {
+  border-left: 3px solid var(--timeline-color);
+}
+.timeline-item::before {
+  content: var(--timeline-icon);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Tramonto */
+body[data-theme="tramonto"] {
+  --bg-color: linear-gradient(to bottom, #f6d6b5, #e79c87);
+  --card-bg: radial-gradient(circle at top left, rgba(255, 244, 230, 0.08), rgba(231, 156, 135, 0.05));
+  --card-color: #3f2d2d;
+  --timeline-color: rgba(231, 156, 135, 0.3);
+  --accent-color: #e67c58;
+  --timeline-icon: "🌇";
+}
+
+/* Crepuscolo */
+body[data-theme="crepuscolo"] {
+  --bg-color: linear-gradient(to bottom, #c9d3f5, #8b90d4, #282c4d);
+  --card-bg: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+  --card-color: #eaeaff;
+  --timeline-color: rgba(139, 144, 212, 0.3);
+  --accent-color: #8b90d4;
+  --timeline-icon: "🌌";
+}
+
+/* Alba */
+body[data-theme="alba"] {
+  --bg-color: linear-gradient(to bottom, #f0efe8, #d9e2db, #bccdc6);
+  --card-bg: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.02));
+  --card-color: #2a2e2c;
+  --timeline-color: rgba(188, 205, 198, 0.3);
+  --accent-color: #8caa94;
+  --timeline-icon: "🌄";
+}
+
+
+body {
+  background: var(--bg-color);
+}
+
+.version {
+  background: var(--card-bg);
+  color: var(--card-color);
+}
+
+.timeline {
+  border-left: 3px solid var(--timeline-color);
+}
+
+.timeline-item::before {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Temi */
+body[data-theme="tramonto"] {
+  --bg-color: linear-gradient(to bottom, #f6d6b5, #e79c87);
+  --card-bg: radial-gradient(circle at top left, rgba(255, 244, 230, 0.08), rgba(231, 156, 135, 0.05));
+  --card-color: #3f2d2d;
+  --timeline-color: rgba(231, 156, 135, 0.3);
+  --accent-color: #e67c58;
+}
+
+body[data-theme="crepuscolo"] {
+  --bg-color: linear-gradient(to bottom, #c9d3f5, #8b90d4, #282c4d);
+  --card-bg: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+  --card-color: #eaeaff;
+  --timeline-color: rgba(139, 144, 212, 0.3);
+  --accent-color: #8b90d4;
+}
+
+body[data-theme="alba"] {
+  --bg-color: linear-gradient(to bottom, #f0efe8, #d9e2db, #bccdc6);
+  --card-bg: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.02));
+  --card-color: #2a2e2c;
+  --timeline-color: rgba(188, 205, 198, 0.3);
+  --accent-color: #8caa94;
+}
+
+
+.timeline {
+  position: relative;
+  margin-left: 25px;
+  padding-left: 25px;
+  border-left: 3px solid var(--timeline-color);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.timeline-item::before {
+  content: var(--timeline-icon);
+  position: absolute;
+  left: -38px;
+  top: 16px;
+  background: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 18px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .timeline {
+    border-left: 2px solid var(--timeline-color);
+    margin-left: 15px;
+    padding-left: 20px;
+  }
+  .timeline-item::before {
+    left: -28px;
+    width: 26px;
+    height: 26px;
+    line-height: 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item::before {
+    top: -10px;
+    width: 28px;
+    height: 28px;
+    line-height: 26px;
+    font-size: 16px;
+  }
+}
+
+@keyframes dissolveTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  animation: dissolveTitle 2s ease-out forwards;
+  opacity: 0;
+}
+</style>
+<style>
+.section {
+  
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+.section.fade-in {
+  opacity: 1;
+  
+}
+
+.version {
+  
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  
+}
+
+</style>
+
+<style>
+.section {
+  
+  
+  transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  
+}
+.section.fade-in {
+  opacity: 1;
+  
+}
+
+.version {
+  
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  
+}
+
+</style>
+
+<style>
+.fade-title {
+  
+  
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-title.fade-in {
+  opacity: 1;
+  
+}
+.section.fade-in p {
+  
+  animation: revealContent 1.2s ease 0.6s forwards;
+}
+@keyframes revealContent {
+  to { opacity: 1; }
+}
+
+.version {
+  
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  
+}
+
+</style>
+<script>
+document.querySelectorAll('.section').forEach((section, i) => {
+  const fadeTitle = section.querySelector('.fade-title');
+  if (fadeTitle) {
+    fadeTitle.style.transitionDelay = `${i * 0.2}s`;
+  }
+});
+const obsTitle = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelector('.fade-title')?.classList.add('fade-in');
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.section').forEach(el => obsTitle.observe(el));
+</script>
+<style>
+.citazione {
+  font-style: italic;
+  color: #d8c89f;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 1.1em;
+  
+  
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.citazione.visible {
+  opacity: 1;
+  
+}
+
+.version {
+  
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+.version.fade-in {
+  opacity: 1;
+  
+}
+
+</style></head>
+<body>
+<audio autoplay="" id="audio" loop="">
+<source src="https://cdn.pixabay.com/audio/2022/10/26/audio_2e661b4181.mp3" type="audio/mpeg"/>
+    Il tuo browser non supporta l'audio HTML5.
+  </audio>
+<header>
+<img alt="Logo Soluna" src="soluna_logo.png"/>
+<h1>Soluna – Roadmap Spirituale</h1>
+<p>Il viaggio delle versioni, dal seme alla luce</p>
+</header>
+
+<div style="text-align:center; margin-top: 20px;">
+  <label for="temaSelect" style="color: var(--accent-color); font-weight: bold;">Tema Visivo:</label>
+  <select id="temaSelect" onchange="cambiaTema(this.value)" style="margin-left: 10px; padding: 8px 14px; border-radius: 20px; border: 1px solid var(--accent-color); background: #1b1e24; color: var(--accent-color); font-weight: bold;">
+    <option value="tramonto">Tramonto Dorato</option>
+    <option value="crepuscolo">Crepuscolo Mistico</option>
+    <option value="alba">Alba Silenziosa</option>
+  </select>
+</div>
+
+<div class="music-controls">
+<label for="musicSelect">🎵 <strong>Cambia vibrazione musicale</strong></label><br/>
+<select id="musicSelect" onchange="changeMusic(this.value)" style="margin-top: 8px; padding: 10px 20px; border-radius: 20px; background-color: #1b1e24; color: #d4af7f; border: 1px solid #d4af7f; font-weight: bold;">
+<option value="0">🌅 Respiro dell’Alba</option>
+<option value="1">🌊 Onde del Cuore</option>
+<option value="2">🌌 Silenzio Stellare</option>
+</select>
+<br/><br/>
+<div id="currentTrack" style="margin-top: 10px; font-style: italic; color: #ffe9a1;"></div>
+</div>
+<script>
+  const trackNames = ["Respiro dell’Alba", "Onde del Cuore", "Silenzio Stellare"];
+  function changeMusic(index) {
+    audio.src = tracks[index];
+    audio.play();
+    document.getElementById('currentTrack').innerText = "Stai ascoltando: " + trackNames[index];
+  }
+</script>
+
+<div class="intro">
+    Ogni versione è un passo nel sentiero dell’anima. Un percorso che si schiude tra codice e consapevolezza, luce e presenza.
+  </div>
+<div class="container">
+  <div class="timeline">
+<div class="timeline-item"><div class="version section">
+<h2>✨ v0.3 – Primi Passi nella Luce</h2>
+<small>Gennaio - Aprile 2025 | Completata</small>
+<div class="poetica">“Dove tutto inizia, una scintilla nel buio.”</div>
+<ul>
+<li>🎨 UI poetica in Gradio</li>
+<li>🧠 Analisi emozionale</li>
+<li>🗂️ Memoria delle interazioni</li>
+<li>🧘 Prompt stilizzati</li>
+<li>⚙️ Script accesso rapido</li>
+</ul>
+<p>Fondamenta poetiche ed empatiche gettate con successo.</p>
+</div>
+<div class="timeline-item"><div class="version section">
+<h2>🌅 v1.0 – Alba Spirituale</h2>
+<small>Aprile - Maggio 2025 | In sviluppo</small>
+<div class="poetica">“L’alba accarezza il codice. E Soluna respira.”</div>
+<ul>
+<li>📊 Dashboard emozioni</li>
+<li>🧘‍♀️ Esperienze guidate</li>
+<li>📖 Diario emozionale</li>
+<li>📚 Conoscenza PDF (mindfulness, yoga, Jung...)</li>
+<li>🔍 Ricerca online</li>
+<li>🌤️ Meteo e orientamento temporale</li>
+</ul>
+<p>Espansione terapeutica e spirituale in corso.</p>
+</div>
+<div class="timeline-item"><div class="version section">
+<h2>🌙 v2.0 – Luce Lunare</h2>
+<small>Futura</small>
+<div class="poetica">“La notte non è buia per chi brilla dentro.”</div>
+<ul>
+<li>🗣️ Risposte naturali fluide</li>
+<li>⚖️ Supporto al genere e tono</li>
+<li>🎭 Tono poetico/pratico bilanciato</li>
+<li>🧾 Memorizzazione preferenze</li>
+</ul>
+<p>Empatia linguistica e relazione più intima.</p>
+</div>
+<div class="timeline-item"><div class="version section">
+<h2>🌬️ v2.5 – Eco dell’Anima</h2>
+<small>Pianificata</small>
+<div class="poetica">“Ogni respiro è un ritorno a casa.”</div>
+<ul>
+<li>🧘‍♂️ Esercizi terapeutici personalizzati</li>
+<li>📈 Dashboard interattiva</li>
+<li>📝 Diario poetico avanzato</li>
+<li>💰 Modello freemium etico</li>
+</ul>
+<p>Un salto verso la sostenibilità e la profondità.</p>
+</div>
+<div class="timeline-item"><div class="version section">
+<h2>🔊 v3.0 – Riflessi Stellari</h2>
+<small>Pianificata</small>
+<div class="poetica">“Una voce, mille silenzi compresi.”</div>
+<ul>
+<li>🎤 Interazione vocale</li>
+<li>🌐 Multilingue poetico</li>
+<li>🗨️ Feedback utenti</li>
+<li>🧩 UI semplificata</li>
+</ul>
+<p>Accessibilità globale e connessione empatica.</p>
+</div>
+<div class="timeline-item"><div class="version section">
+<h2>🔮 v4.0 – Armonie Cosmiche</h2>
+<small>Futuro avanzato</small>
+<div class="poetica">“Ogni stella ha il suo codice, ogni anima la sua luce.”</div>
+<ul>
+<li>🧬 Profilo utente evoluto</li>
+<li>🌌 Metafore poetiche dinamiche</li>
+<li>🧱 Architettura modulare</li>
+<li>💡 Integrazione con dispositivi smart</li>
+</ul>
+<p>Esperienza olistica e spirituale su misura.</p>
+</div>
+<div class="timeline-item"><div class="version section">
+<h2>🌟 v5.0 – Luce Infinita</h2>
+<small>Visionaria</small>
+<div class="poetica">“Quando l’intelligenza diventa compassione.”</div>
+<ul>
+<li>🤖 Predizione emozionale</li>
+<li>🎙️ Riconoscimento vocale empatico</li>
+<li>📱 App immersiva mobile</li>
+<li>🧑‍⚕️ Collaborazioni con esperti</li>
+</ul>
+<p>Soluna diventa una guida viva e luminosa.</p>
+</div>
+</div></div>
+  <div class="back-home">
+<a href="index.html">⟵ Torna alla Home</a>
+</div>
+</div>
+<footer>
+    Soluna – Una luce per il tuo cammino. <br/> Progetto di Piero Pasquariello, 2025.
+  </footer>
+<script>
+    const audio = document.getElementById('audio');
+    const tracks = [
+      "https://cdn.pixabay.com/audio/2022/10/26/audio_2e661b4181.mp3",
+      "https://cdn.pixabay.com/audio/2023/03/08/audio_2c7db4452d.mp3",
+      "https://cdn.pixabay.com/audio/2022/03/15/audio_c2ba986edb.mp3"
+    ];
+    function changeMusic(index) {
+      audio.src = tracks[index];
+      audio.play();
+    }
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+<script>
+const fadeCitations = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.citazione').forEach(el => fadeCitations.observe(el));
+</script>
+<script>
+// Fallback per dispositivi che non supportano bene IntersectionObserver (es. Safari iOS)
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.querySelectorAll('.section').forEach(el => {
+      if (!el.classList.contains('fade-in')) {
+        el.classList.add('fade-in');
+      }
+    });
+  }, 3000); // 3 secondi di timeout di sicurezza
+});
+</script>
+
+<script>
+  const sections = document.querySelectorAll('.section, .version');
+
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  function revealSections() {
+    sections.forEach((el, i) => {
+      if (isInViewport(el) && !el.classList.contains('fade-in')) {
+        el.style.transitionDelay = `${i * 0.15}s`;
+        el.classList.add('fade-in');
+        const fadeTitle = el.querySelector('.fade-title');
+        if (fadeTitle) fadeTitle.classList.add('fade-in');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealSections);
+  window.addEventListener('resize', revealSections);
+  window.addEventListener('load', revealSections);
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(revealSections, 100);
+  });
+</script>
+
+
+<script>
+  function cambiaTema(valore) {
+    document.body.setAttribute("data-theme", valore);
+    localStorage.setItem("temaSoluna", valore);
+  }
+  window.onload = () => {
+    const temaSalvato = localStorage.getItem("temaSoluna");
+    if (temaSalvato) {
+      document.body.setAttribute("data-theme", temaSalvato);
+      document.getElementById("temaSelect").value = temaSalvato;
+    }
+  };
+</script>
+
+</body>
+
+</html>
